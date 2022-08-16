@@ -1,0 +1,54 @@
+@import './config.scss';
+
+.input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $gray-100;
+  outline: none;
+  padding: 0 8px;
+
+  &:active, &:focus, &:hover, &:focus-visible {
+    border: none;
+    border-bottom: 1px solid $primary-color;
+  }
+}
+
+.input-big {
+  border-width: 2px;
+  font-size: 20px;
+
+  &:active, &:focus, &:hover, &:focus-visible {
+    border-width: 2px;
+  }
+}
+
+.input-outline {
+  background: white;
+  border: 1px solid $gray-50;
+  border-radius: 4px;
+  outline: none;
+  padding: 0 8px;
+  height: 34px;
+  font-size: 14px;
+
+  &:active, &:focus, &:hover, &:focus-visible {
+    border: 1px solid $primary-color;
+  }
+}
+
+.input-icon-after {
+  position: relative;
+
+  input {
+    padding-right: 26px;
+  }
+
+  .input-icon-container {
+    position: absolute;
+    right: 8px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}

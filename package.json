@@ -1,0 +1,41 @@
+{
+  "name": "addin-debug",
+  "version": "0.0.1",
+  "description": "Reproduction Monorepo for debugging Outlook.",
+  "workspaces": [
+    "apps/**",
+    "packages/**"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "prepare": "husky install",
+    "typecheck": "turbo run typecheck",
+    "outlook": "pnpm --filter outlook",
+    "ui": "pnpm --filter ui"
+  },
+  "keywords": [],
+  "author": "Richard Poelderl",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2",
+    "prettier": "^2.7.1",
+    "turbo": "^1.2.16"
+  },
+  "lint-staged": {
+    "apps/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/ui/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/calendar/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+import './styles/config.scss'
+import './styles/color.scss'
+import './styles/font.scss'
+import './styles/button.scss'
+import './styles/background.scss'
+import './styles/input.scss'
+import './styles/switch.scss'
+import './styles/size.scss'

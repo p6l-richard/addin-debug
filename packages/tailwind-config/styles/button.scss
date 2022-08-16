@@ -1,0 +1,97 @@
+@import './config.scss';
+
+.button {
+  background: $primary-color;
+  border-radius: 4px;
+  font-weight: 600;
+  color: white;
+  padding: 8px 20px;
+
+  &:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  &:active:not(:disabled) {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    background: #C0C0C0;
+    color: #6A7482;
+    cursor: not-allowed;
+  }
+}
+
+.button-outline {
+  background: transparent;
+  border: 1px solid $gray-75;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 34px;
+  font-weight: 500;
+  color: $gray-600;
+  padding: 4px 20px;
+
+  &:hover:not(:disabled) {
+    border-color: $primary-color;
+    opacity: 0.8;
+  }
+
+  &:active:not(:disabled) {
+    background: $gray-75;
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    background: #C0C0C0;
+    color: #6A7482;
+    cursor: not-allowed;
+  }
+}
+
+.button-borderless {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 34px;
+  font-weight: 500;
+  color: $gray-600;
+  padding: 4px 20px;
+
+  &:hover:not(:disabled) {
+    opacity: 0.8;
+  }
+
+  &:active:not(:disabled) {
+    background: $gray-75;
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    color: #6A7482;
+    cursor: not-allowed;
+  }
+}
+
+.button-borderless-danger {
+  color: $error-color;
+}
+
+.icon-button {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  &:hover:not(:disabled) {
+    background: $gray-75;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
